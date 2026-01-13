@@ -70,7 +70,7 @@
         <repository>
             <id>github</id>
             <name>GitHub MineValley Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/MineValley/RegionsAPI</url>
+            <url>https://maven.pkg.github.com/MineValley/CraftingAPI</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -83,7 +83,7 @@
             <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
         <repository>
-            <id>github</id>
+            <id>core-api</id>
             <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
             <releases>
                 <updatePolicy>always</updatePolicy>
@@ -93,8 +93,8 @@
             </snapshots>
         </repository>
         <repository>
-            <id>fastcar-api</id>
-            <url>https://maven.pkg.github.com/MineValley/FastCarAPI</url>
+            <id>crafting-api</id>
+            <url>https://maven.pkg.github.com/MineValley/CraftingAPI</url>
             <releases>
                 <updatePolicy>always</updatePolicy>
             </releases>

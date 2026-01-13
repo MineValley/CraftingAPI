@@ -1,4 +1,4 @@
-name: RegionAPI | Nightly Builder
+name: CraftingAPI | Nightly Builder
 
 on:
   push:
