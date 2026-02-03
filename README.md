@@ -1,6 +1,6 @@
 # ![Logo](https://cdn.minevalley.eu/branding/logo_64px_cropped.png) - CraftingAPI
 
-The CraftingAPI provides access to custom crafting recipes for MineValleyEU, enabling the creation of shaped and shapeless recipes with custom crafting durations.
+The CraftingAPI provides access to create custom crafting recipes (shaped and shapeless) for MineValleyEU
 
 ## Maven Integration
 
