@@ -1,0 +1,66 @@
+package minevalley.crafting.api.recipe;
+
+import minevalley.core.api.users.OnlineUser;
+import minevalley.crafting.api.ingredient.CraftingIngredient;
+import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.Contract;
+
+import javax.annotation.Nonnull;
+import java.util.function.Predicate;
+
+@SuppressWarnings("unused")
+public interface CustomRecipe {
+
+    /**
+     * Gets the result item stack of this custom recipe.
+     *
+     * @return the result item stack
+     */
+    @Nonnull
+    @Contract(pure = true)
+    ItemStack getResult();
+
+    /**
+     * Gets the crafting duration in milliseconds for this custom recipe.
+     *
+     * @return the crafting duration in milliseconds
+     */
+    @Contract(pure = true)
+    long getCraftingDurationMs();
+
+    /**
+     * Maps a symbol in the recipe shape to a crafting ingredient.
+     *
+     * @param symbol     the symbol to map
+     * @param ingredient the crafting ingredient to map to the symbol
+     * @throws IllegalArgumentException if the symbol is already mapped or if the ingredient is null
+     */
+    void mapIngredient(char symbol, @Nonnull CraftingIngredient ingredient) throws IllegalArgumentException;
+
+    /**
+     * Sets a requirement that must be fulfilled by the user trying to craft this recipe.
+     *
+     * @param requirement the requirement predicate
+     * @throws IllegalArgumentException if the requirement is null
+     */
+    void require(@Nonnull Predicate<OnlineUser> requirement) throws IllegalArgumentException;
+
+    /**
+     * Removes all requirements for crafting this recipe.
+     */
+    default void removeRequirements() {
+        require(user -> true);
+    }
+
+    /**
+     * Registers the custom shape recipe so it becomes available in the crafting system.
+     *
+     * @throws IllegalStateException if the recipe, or another with the same ingredients is already registered
+     */
+    void register() throws IllegalStateException;
+
+    /**
+     * Unregisters the custom shape recipe so it is no longer available in the crafting system.
+     */
+    void unregister();
+}
