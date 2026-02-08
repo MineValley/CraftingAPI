@@ -1,6 +1,6 @@
 package minevalley.crafting.api;
 
-import minevalley.crafting.api.ingredient.CraftingIngredient;
+import minevalley.crafting.api.ingredient.RecipeIngredient;
 import minevalley.crafting.api.recipe.CustomShapedRecipe;
 import minevalley.crafting.api.recipe.CustomShapelessRecipe;
 import org.bukkit.inventory.ItemStack;
@@ -39,8 +39,8 @@ public class Crafting {
      */
     @Nonnull
     public static CustomShapelessRecipe createCustomRecipe(@Nonnull ItemStack result, long craftingDurationMs,
-                                                           @Nonnull CraftingIngredient ingredient,
-                                                           @Nonnull CraftingIngredient... ingredients)
+                                                           @Nonnull RecipeIngredient ingredient,
+                                                           @Nonnull RecipeIngredient... ingredients)
             throws IllegalArgumentException {
         return provider.createCustomShapelessRecipe(result, craftingDurationMs, ingredient, ingredients);
     }

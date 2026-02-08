@@ -1,6 +1,6 @@
 package minevalley.crafting.api.recipe;
 
-import minevalley.crafting.api.ingredient.CraftingIngredient;
+import minevalley.crafting.api.ingredient.RecipeIngredient;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
@@ -15,5 +15,5 @@ public interface CustomShapedRecipe extends CustomRecipe {
      */
     @Nonnull
     @Contract(pure = true)
-    CraftingIngredient[][] getShape();
+    RecipeIngredient[][] getShape();
 }

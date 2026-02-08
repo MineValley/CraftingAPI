@@ -13,7 +13,7 @@ import java.util.function.Predicate;
  * Represents an ingredient used in crafting recipes.
  */
 @SuppressWarnings("unused")
-public class CraftingIngredient {
+public class RecipeIngredient {
 
     /**
      * Predicate to validate if an ItemStack matches this ingredient.
@@ -26,60 +26,60 @@ public class CraftingIngredient {
     private final Function<ItemStack, ItemStack> transformer;
 
     /**
-     * Constructs a CraftingIngredient with the specified validator and transformer.
+     * Constructs a RecipeIngredient with the specified validator and transformer.
      *
      * @param validator   predicate that defines, whether an ItemStack matches this ingredient
      * @param transformer function that transforms the ItemStack when used in crafting
      */
-    public CraftingIngredient(@Nonnull Predicate<ItemStack> validator, @Nonnull Function<ItemStack, ItemStack> transformer) {
+    public RecipeIngredient(@Nonnull Predicate<ItemStack> validator, @Nonnull Function<ItemStack, ItemStack> transformer) {
         this.validator = validator;
         this.transformer = transformer;
     }
 
     /**
-     * Constructs a CraftingIngredient with the specified ItemStack and transformer.
+     * Constructs a RecipeIngredient with the specified ItemStack and transformer.
      *
      * @param itemStack   the ItemStack to match
      * @param transformer function that transforms the ItemStack when used in crafting
      */
-    public CraftingIngredient(@Nonnull ItemStack itemStack, @Nonnull Function<ItemStack, ItemStack> transformer) {
+    public RecipeIngredient(@Nonnull ItemStack itemStack, @Nonnull Function<ItemStack, ItemStack> transformer) {
         this(stack -> stack.isSimilar(itemStack), transformer);
     }
 
     /**
-     * Constructs a CraftingIngredient with the specified Material and transformer.
+     * Constructs a RecipeIngredient with the specified Material and transformer.
      *
      * @param material    the Material to match
      * @param transformer function that transforms the ItemStack when used in crafting
      */
-    public CraftingIngredient(@Nonnull Material material, @Nonnull Function<ItemStack, ItemStack> transformer) {
+    public RecipeIngredient(@Nonnull Material material, @Nonnull Function<ItemStack, ItemStack> transformer) {
         this(stack -> stack.getType() == material, transformer);
     }
 
     /**
-     * Constructs a CraftingIngredient with the specified validator.
+     * Constructs a RecipeIngredient with the specified validator.
      *
      * @param validator predicate that defines, whether an ItemStack matches this ingredient
      */
-    public CraftingIngredient(@Nonnull Predicate<ItemStack> validator) {
+    public RecipeIngredient(@Nonnull Predicate<ItemStack> validator) {
         this(validator, ItemStack::subtract);
     }
 
     /**
-     * Constructs a CraftingIngredient with the specified ItemStack.
+     * Constructs a RecipeIngredient with the specified ItemStack.
      *
      * @param itemStack the ItemStack to match
      */
-    public CraftingIngredient(@Nonnull ItemStack itemStack) {
+    public RecipeIngredient(@Nonnull ItemStack itemStack) {
         this(stack -> stack.isSimilar(itemStack));
     }
 
     /**
-     * Constructs a CraftingIngredient with the specified Material.
+     * Constructs a RecipeIngredient with the specified Material.
      *
      * @param material the Material to match
      */
-    public CraftingIngredient(@Nonnull Material material) {
+    public RecipeIngredient(@Nonnull Material material) {
         this(stack -> stack.getType() == material);
     }
 
