@@ -33,23 +33,26 @@ public interface CustomRecipe {
      *
      * @param symbol     the symbol to map
      * @param ingredient the crafting ingredient to map to the symbol
+     * @return this
      * @throws IllegalArgumentException if the symbol is already mapped or if the ingredient is null
      */
-    void mapIngredient(char symbol, @Nonnull RecipeIngredient ingredient) throws IllegalArgumentException;
+    CustomRecipe mapIngredient(char symbol, @Nonnull RecipeIngredient ingredient) throws IllegalArgumentException;
 
     /**
      * Sets a requirement that must be fulfilled by the user trying to craft this recipe.
      *
      * @param requirement the requirement predicate
+     * @return this
      * @throws IllegalArgumentException if the requirement is null
      */
-    void require(@Nonnull Predicate<OnlineUser> requirement) throws IllegalArgumentException;
+    CustomRecipe require(@Nonnull Predicate<OnlineUser> requirement) throws IllegalArgumentException;
 
     /**
      * Removes all requirements for crafting this recipe.
+     * @return this
      */
-    default void removeRequirements() {
-        require(user -> true);
+    default CustomRecipe removeRequirements() {
+        return require(user -> true);
     }
 
     /**
