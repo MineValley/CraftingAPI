@@ -1,7 +1,6 @@
 package minevalley.crafting.api.recipe;
 
 import minevalley.core.api.users.OnlineUser;
-import minevalley.crafting.api.ingredient.RecipeIngredient;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Contract;
 
@@ -27,16 +26,6 @@ public interface CustomRecipe {
      */
     @Contract(pure = true)
     long getCraftingDurationMs();
-
-    /**
-     * Maps a symbol in the recipe shape to a crafting ingredient.
-     *
-     * @param symbol     the symbol to map
-     * @param ingredient the crafting ingredient to map to the symbol
-     * @return this
-     * @throws IllegalArgumentException if the symbol is already mapped or if the ingredient is null
-     */
-    CustomRecipe mapIngredient(char symbol, @Nonnull RecipeIngredient ingredient) throws IllegalArgumentException;
 
     /**
      * Sets a requirement that must be fulfilled by the user trying to craft this recipe.
