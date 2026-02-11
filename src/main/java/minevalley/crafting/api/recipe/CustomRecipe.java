@@ -1,7 +1,6 @@
 package minevalley.crafting.api.recipe;
 
 import minevalley.core.api.users.OnlineUser;
-import minevalley.crafting.api.ingredient.RecipeIngredient;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Contract;
 
