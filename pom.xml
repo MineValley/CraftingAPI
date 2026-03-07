@@ -8,7 +8,7 @@
 
     <properties>
         <version>1.0.3</version>
-        <core-api.version>1.302.3</core-api.version>
+        <core-api.version>1.304.5</core-api.version>
 
         <lombok.version>1.18.30</lombok.version>
 
