@@ -79,28 +79,12 @@
 
     <repositories>
         <repository>
-            <id>paper-mc</id>
-            <url>https://repo.papermc.io/repository/maven-public/</url>
-        </repository>
-        <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
-            <releases>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
         </repository>
         <repository>
-            <id>crafting-api</id>
-            <url>https://maven.pkg.github.com/MineValley/CraftingAPI</url>
-            <releases>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <id>paper-mc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
     </repositories>
 
@@ -110,6 +94,7 @@
             <groupId>minevalley.core</groupId>
             <artifactId>api</artifactId>
             <version>${core-api.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Paper -->
