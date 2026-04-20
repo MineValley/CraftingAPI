@@ -8,7 +8,6 @@
 
     <properties>
         <version>1.0.4</version>
-        <core-api.version>1.304.5</core-api.version>
 
         <lombok.version>1.18.30</lombok.version>
 
@@ -21,6 +20,60 @@
     <artifactId>api</artifactId>
     <version>${version}</version>
     <packaging>jar</packaging>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub MineValley Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/MineValley/CraftingAPI</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </distributionManagement>
+
+    <dependencies>
+        <!-- CoreAPI -->
+        <dependency>
+            <groupId>minevalley.core</groupId>
+            <artifactId>api</artifactId>
+            <version>${core-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Paper -->
+        <!--suppress VulnerableLibrariesLocal -->
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.21.4-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Libs -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
+        </repository>
+        <repository>
+            <id>paper-mc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -65,58 +118,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub MineValley Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/MineValley/CraftingAPI</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
-        </repository>
-        <repository>
-            <id>paper-mc</id>
-            <url>https://repo.papermc.io/repository/maven-public/</url>
-        </repository>
-    </repositories>
-
-    <dependencies>
-        <!-- CoreAPI -->
-        <dependency>
-            <groupId>minevalley.core</groupId>
-            <artifactId>api</artifactId>
-            <version>${core-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Paper -->
-        <!--suppress VulnerableLibrariesLocal -->
-        <dependency>
-            <groupId>io.papermc.paper</groupId>
-            <artifactId>paper-api</artifactId>
-            <version>1.21.4-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Libs -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.11.0</version>
-        </dependency>
-    </dependencies>
 </project>
