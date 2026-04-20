@@ -35,9 +35,9 @@
     <dependencies>
         <!-- CoreAPI -->
         <dependency>
-            <groupId>minevalley.core</groupId>
-            <artifactId>api</artifactId>
-            <version>${core-api.version}</version>
+            <groupId>eu.minevalley</groupId>
+            <artifactId>core-api</artifactId>
+            <version>1.306.0</version>
             <scope>provided</scope>
         </dependency>
 
