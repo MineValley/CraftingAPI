@@ -11,9 +11,6 @@ Before proceeding, ensure you've added a token to your `settings.xml` file (deta
 <repository>
     <id>CraftingAPI</id>
     <url>https://maven.pkg.github.com/MineValley/CraftingAPI</url>
-    <snapshots>
-        <enabled>true</enabled>
-    </snapshots>
 </repository>
 ```
 
@@ -22,5 +19,6 @@ Before proceeding, ensure you've added a token to your `settings.xml` file (deta
     <groupId>minevalley.crafting</groupId>
     <artifactId>api</artifactId>
     <version>1.0.0</version>
+    <scope>provided</scope>
 </dependency>
 ```
