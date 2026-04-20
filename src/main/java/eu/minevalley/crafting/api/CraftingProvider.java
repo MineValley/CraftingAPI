@@ -1,8 +1,8 @@
-package minevalley.crafting.api;
+package eu.minevalley.crafting.api;
 
-import minevalley.crafting.api.ingredient.RecipeIngredient;
-import minevalley.crafting.api.recipe.CustomShapedRecipe;
-import minevalley.crafting.api.recipe.CustomShapelessRecipe;
+import eu.minevalley.crafting.api.ingredient.RecipeIngredient;
+import eu.minevalley.crafting.api.recipe.CustomShapedRecipe;
+import eu.minevalley.crafting.api.recipe.CustomShapelessRecipe;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;

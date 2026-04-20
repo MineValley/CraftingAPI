@@ -1,4 +1,4 @@
-package minevalley.crafting.api.recipe;
+package eu.minevalley.crafting.api.recipe;
 
 import eu.minevalley.core.api.user.OnlineUser;
 import org.bukkit.inventory.ItemStack;

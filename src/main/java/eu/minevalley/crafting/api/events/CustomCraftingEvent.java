@@ -1,7 +1,7 @@
-package minevalley.crafting.api.events;
+package eu.minevalley.crafting.api.events;
 
+import eu.minevalley.crafting.api.recipe.CustomRecipe;
 import lombok.Getter;
-import minevalley.crafting.api.recipe.CustomRecipe;
 import org.bukkit.block.Block;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;

@@ -1,4 +1,4 @@
-package minevalley.crafting.api.ingredient;
+package eu.minevalley.crafting.api.ingredient;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

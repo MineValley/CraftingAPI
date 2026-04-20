@@ -1,6 +1,6 @@
-package minevalley.crafting.api.recipe;
+package eu.minevalley.crafting.api.recipe;
 
-import minevalley.crafting.api.ingredient.RecipeIngredient;
+import eu.minevalley.crafting.api.ingredient.RecipeIngredient;
 
 import javax.annotation.Nonnull;
 
