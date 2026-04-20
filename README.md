@@ -16,8 +16,8 @@ Before proceeding, ensure you've added a token to your `settings.xml` file (deta
 
 ```xml
 <dependency>
-    <groupId>minevalley.crafting</groupId>
-    <artifactId>api</artifactId>
+    <groupId>eu.minevalley</groupId>
+    <artifactId>crafting-api</artifactId>
     <version>1.0.0</version>
     <scope>provided</scope>
 </dependency>
