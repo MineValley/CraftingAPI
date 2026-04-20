@@ -7,8 +7,6 @@
     <name>CraftingAPI</name>
 
     <properties>
-        <version>1.0.4</version>
-
         <lombok.version>1.18.30</lombok.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,9 +14,9 @@
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
-    <groupId>minevalley.crafting</groupId>
-    <artifactId>api</artifactId>
-    <version>${version}</version>
+    <groupId>eu.minevalley</groupId>
+    <artifactId>crafting-api</artifactId>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <distributionManagement>
